@@ -13,7 +13,7 @@ git clone git@github.com:lukasvasadi/get-venv.git ($Env:PSModulePath.Split(';')[
 2. Create an environment variable `PYTHON_VENV_PATH` that stores the path to a `venv` parent directory:
 
 ```ps1
-[System.Environment]::SetEnvironmentVariable('PYTHON_VENV_PATH','C:\path\to\venv',[System.EnvironmentVariableTarget]::User)
+if (-not (Test-Path env:PYTHON_VENV_PATH)) { [System.Environment]::SetEnvironmentVariable('PYTHON_VENV_PATH','C:\path\to\venv',[System.EnvironmentVariableTarget]::User) }
 ```
 
 3. Restart PowerShell to promote changes.
