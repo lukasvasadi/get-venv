@@ -29,5 +29,5 @@ Get-Venv
 Supply an alternative path to the `venv` parent directory:
 
 ```ps1
-Set-Venv -Name myenvironment -Path C:\path\to\venv
+Get-Venv -Path C:\path\to\venv
 ```
